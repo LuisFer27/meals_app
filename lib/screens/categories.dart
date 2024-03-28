@@ -6,12 +6,15 @@ import 'package:meals_app/screens/meals.dart';
 import 'package:meals_app/widgets/category_grid_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
-  const CategoriesScreen({super.key, required this.availableMeals});
+  const CategoriesScreen({
+    super.key,
+    required this.availableMeals,
+  });
 
   final List<Meal> availableMeals;
 
   void _selectCategory(BuildContext context, Category category) {
-    final filteredMeals = dummyMeals
+    final filteredMeals = availableMeals
         .where((meal) => meal.categories.contains(category.id))
         .toList();
     Navigator.of(context).push(
@@ -21,9 +24,7 @@ class CategoriesScreen extends StatelessWidget {
           meals: filteredMeals,
         ),
       ),
-    );
-    //alternativa al comando
-    //Navigator.push(context, route)//pop para regresar a una pantalla anterior y push para navegar a una nueva
+    ); // Navigator.push(context, route)
   }
 
   @override
@@ -37,8 +38,7 @@ class CategoriesScreen extends StatelessWidget {
         mainAxisSpacing: 20,
       ),
       children: [
-        //alternativa
-        //availableCategories.map((category)=>CategoryGridItem(category: category)).toList()
+        // availableCategories.map((category) => CategoryGridItem(category: category)).toList()
         for (final category in availableCategories)
           CategoryGridItem(
             category: category,

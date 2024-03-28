@@ -4,7 +4,6 @@ import 'package:meals_app/screens/categories.dart';
 import 'package:meals_app/screens/filters.dart';
 import 'package:meals_app/screens/meals.dart';
 import 'package:meals_app/widgets/main_drawer.dart';
-import 'package:meals_app/providers/meals_provider.dart';
 import 'package:meals_app/providers/favorites_provider.dart';
 import 'package:meals_app/providers/filters_provider.dart';
 
@@ -12,11 +11,12 @@ const kInitialFilters = {
   Filter.glutenFree: false,
   Filter.lactoseFree: false,
   Filter.vegetarian: false,
-  Filter.vegan: false,
+  Filter.vegan: false
 };
 
 class TabsScreen extends ConsumerStatefulWidget {
   const TabsScreen({super.key});
+
   @override
   ConsumerState<TabsScreen> createState() {
     return _TabsScreenState();
@@ -37,7 +37,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     if (identifier == 'filters') {
       await Navigator.of(context).push<Map<Filter, bool>>(
         MaterialPageRoute(
-          builder: (ctx) => FiltersScreen(),
+          builder: (ctx) => const FiltersScreen(),
         ),
       );
     }
@@ -45,33 +45,19 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final meals = ref.watch(mealsProvider);
-    final activeFilters = ref.watch(filtersProvider);
-    final availableMeals = meals.where((meal) {
-      if (activeFilters[Filter.glutenFree]! && !meal.isGlutenFree) {
-        return false;
-      }
-      if (activeFilters[Filter.lactoseFree]! && !meal.isLactoseFree) {
-        return false;
-      }
-      if (activeFilters[Filter.vegetarian]! && !meal.isVegetarian) {
-        return false;
-      }
-      if (activeFilters[Filter.vegan]! && !meal.isVegan) {
-        return false;
-      }
-      return true;
-    }).toList();
+    final availableMeals = ref.watch(filteredMealsProvider);
+
     Widget activePage = CategoriesScreen(
       availableMeals: availableMeals,
     );
-    var activePageTitle = 'Categorías';
+    var activePageTitle = 'Categories';
+
     if (_selectedPageIndex == 1) {
       final favoriteMeals = ref.watch(favoriteMealsProvider);
       activePage = MealsScreen(
         meals: favoriteMeals,
       );
-      activePageTitle = 'Mis Favoritos';
+      activePageTitle = 'Your Favorites';
     }
 
     return Scaffold(
@@ -88,12 +74,12 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.set_meal),
-            label: 'Categorías',
+            label: 'Categories',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.star),
-            label: 'Favoritos',
-          )
+            label: 'Favorites',
+          ),
         ],
       ),
     );
