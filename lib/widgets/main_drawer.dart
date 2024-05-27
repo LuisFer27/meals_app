@@ -34,7 +34,8 @@ class MainDrawer extends StatelessWidget {
                 ),
                 const SizedBox(width: 18),
                 Text(
-                  'Cooking Up!',
+                  //'Cooking Up!',
+                  'Cocinemos',
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         color: Theme.of(context).colorScheme.primary,
                       ),
@@ -49,7 +50,8 @@ class MainDrawer extends StatelessWidget {
               color: Theme.of(context).colorScheme.onBackground,
             ),
             title: Text(
-              'Meals',
+              //'Meals',
+              'Refrigerios',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                     fontSize: 24,
@@ -66,7 +68,8 @@ class MainDrawer extends StatelessWidget {
               color: Theme.of(context).colorScheme.onBackground,
             ),
             title: Text(
-              'Filters',
+              //'Filters',
+              'Filtros',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                     fontSize: 24,

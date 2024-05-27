@@ -7,52 +7,52 @@ import 'package:meals_app/models/meal.dart';
 const availableCategories = [
   Category(
     id: 'c1',
-    title: 'Italiana',
+    title: 'Italian',
     color: Colors.purple,
   ),
   Category(
     id: 'c2',
-    title: 'Fácil y rápido',
+    title: 'Quick & Easy',
     color: Colors.red,
   ),
   Category(
     id: 'c3',
-    title: 'Hamburguesas',
+    title: 'Hamburgers',
     color: Colors.orange,
   ),
   Category(
     id: 'c4',
-    title: 'Alemana',
+    title: 'German',
     color: Colors.amber,
   ),
   Category(
     id: 'c5',
-    title: 'Ligero y saludable',
+    title: 'Light & Lovely',
     color: Colors.blue,
   ),
   Category(
     id: 'c6',
-    title: 'Exotica',
+    title: 'Exotic',
     color: Colors.green,
   ),
   Category(
     id: 'c7',
-    title: 'Desayunos',
+    title: 'Breakfast',
     color: Colors.lightBlue,
   ),
   Category(
     id: 'c8',
-    title: 'Asiática',
+    title: 'Asian',
     color: Colors.lightGreen,
   ),
   Category(
     id: 'c9',
-    title: 'Francesa',
+    title: 'French',
     color: Colors.pink,
   ),
   Category(
     id: 'c10',
-    title: 'Verano',
+    title: 'Summer',
     color: Colors.teal,
   ),
 ];
@@ -64,19 +64,19 @@ const dummyMeals = [
       'c1',
       'c2',
     ],
-    title: 'Spaghetti con Salsa de Tomate',
+    title: 'Spaghetti with Tomato Sauce',
     affordability: Affordability.affordable,
     complexity: Complexity.simple,
     imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
     duration: 20,
     ingredients: [
-      '4 Tomates',
-      '1 Cucharada de aceite de oliva',
-      '1 Cebolla',
+      '4 Tomatoes',
+      '1 Tablespoon of Olive Oil',
+      '1 Onion',
       '250g Spaghetti',
-      'Especias',
-      'Queso (opcional)'
+      'Spices',
+      'Cheese (optional)'
     ],
     steps: [
       'Cut the tomatoes and the onion into small pieces.',
@@ -97,18 +97,18 @@ const dummyMeals = [
     categories: [
       'c2',
     ],
-    title: 'Sandwich hawaiano tostado',
+    title: 'Toast Hawaii',
     affordability: Affordability.affordable,
     complexity: Complexity.simple,
     imageUrl:
         'https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg',
     duration: 10,
     ingredients: [
-      '1 Rebanada de Pan Blanco',
-      '1 Rebanada de Jamón',
-      '1 Rebanada de piña',
-      '1-2 Rebanadas de Queso Americano',
-      'Mantequilla'
+      '1 Slice White Bread',
+      '1 Slice Ham',
+      '1 Slice Pineapple',
+      '1-2 Slices of Cheese',
+      'Butter'
     ],
     steps: [
       'Butter one side of the white bread',
@@ -126,19 +126,19 @@ const dummyMeals = [
       'c2',
       'c3',
     ],
-    title: 'Hamburguesa Clásica',
+    title: 'Classic Hamburger',
     affordability: Affordability.pricey,
     complexity: Complexity.simple,
     imageUrl:
         'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg',
     duration: 45,
     ingredients: [
-      '300g Carne Molida',
-      '1 Tomate',
-      '1 Pepinillo',
-      '1 Cebolla',
-      'Catsup',
-      '2 Panes de Hamburguesa'
+      '300g Cattle Hack',
+      '1 Tomato',
+      '1 Cucumber',
+      '1 Onion',
+      'Ketchup',
+      '2 Burger Buns'
     ],
     steps: [
       'Form 2 patties',

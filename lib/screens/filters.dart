@@ -13,7 +13,7 @@ class FiltersScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Your Filters'),
+        title: const Text('Tus Filtros'),
       ),
       body: Column(
         children: [
@@ -25,13 +25,15 @@ class FiltersScreen extends ConsumerWidget {
                   .setFilter(Filter.glutenFree, isChecked);
             },
             title: Text(
-              'Gluten-free',
+              //'Gluten-free',
+              'Libre de gluten',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                   ),
             ),
             subtitle: Text(
-              'Only include gluten-free meals.',
+              //'Only include gluten-free meals.',
+              'Solo incluye refrigerios libres de gluten.',
               style: Theme.of(context).textTheme.labelMedium!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                   ),
@@ -47,13 +49,15 @@ class FiltersScreen extends ConsumerWidget {
                   .setFilter(Filter.lactoseFree, isChecked);
             },
             title: Text(
-              'Lactose-free',
+              //'Lactose-free',
+              'Libre de lactosa',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                   ),
             ),
             subtitle: Text(
-              'Only include lactose-free meals.',
+              //'Only include lactose-free meals.',
+              'Solo incluye refrigerios libres de lactosa.',
               style: Theme.of(context).textTheme.labelMedium!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                   ),
@@ -69,13 +73,15 @@ class FiltersScreen extends ConsumerWidget {
                   .setFilter(Filter.vegetarian, isChecked);
             },
             title: Text(
-              'Vegetarian',
+              //'Vegetarian',
+              'Vegetariano',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                   ),
             ),
             subtitle: Text(
-              'Only include vegetarian meals.',
+              //'Only include vegetarian meals.',
+              'Solo incluye refrigerios vegetarianos',
               style: Theme.of(context).textTheme.labelMedium!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                   ),
@@ -91,13 +97,15 @@ class FiltersScreen extends ConsumerWidget {
                   .setFilter(Filter.vegan, isChecked);
             },
             title: Text(
-              'Vegan',
+              //'Vegan',
+              'Vegano',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                   ),
             ),
             subtitle: Text(
-              'Only include vegan meals.',
+              //'Only include vegan meals.',
+              'Solo incluye refrigerios veganos.',
               style: Theme.of(context).textTheme.labelMedium!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                   ),

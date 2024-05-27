@@ -50,14 +50,16 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     Widget activePage = CategoriesScreen(
       availableMeals: availableMeals,
     );
-    var activePageTitle = 'Categories';
+    // var activePageTitle = 'Categories';
+    var activePageTitle = 'Categorías';
 
     if (_selectedPageIndex == 1) {
       final favoriteMeals = ref.watch(favoriteMealsProvider);
       activePage = MealsScreen(
         meals: favoriteMeals,
       );
-      activePageTitle = 'Your Favorites';
+      //activePageTitle = 'Your Favorites';
+      activePageTitle = 'Tus Favoritos';
     }
 
     return Scaffold(
@@ -74,11 +76,13 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.set_meal),
-            label: 'Categories',
+            //label: 'Categories',
+            label: 'Categorías',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.star),
-            label: 'Favorites',
+            //label: 'Favorites',
+            label: 'Favoritos',
           ),
         ],
       ),

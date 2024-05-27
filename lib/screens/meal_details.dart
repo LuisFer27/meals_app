@@ -28,7 +28,10 @@ class MealDetailsScreen extends ConsumerWidget {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(
-                      wasAdded ? 'Meal added as a favorite.' : 'Meal removed.'),
+                      // wasAdded ? 'Meal added as a favorite.' : 'Meal removed.'),
+                      wasAdded
+                          ? 'Refrigerio añadido a mis favoritos.'
+                          : 'Refrigerio eliminado de mis favoritos.'),
                 ),
               );
             },
@@ -65,7 +68,8 @@ class MealDetailsScreen extends ConsumerWidget {
               ),
               const SizedBox(height: 14),
               Text(
-                'Ingredients',
+                //'Ingredients',
+                'Ingredientes',
                 style: Theme.of(context).textTheme.titleLarge!.copyWith(
                       color: Theme.of(context).colorScheme.primary,
                       fontWeight: FontWeight.bold,
@@ -81,7 +85,8 @@ class MealDetailsScreen extends ConsumerWidget {
                 ),
               const SizedBox(height: 24),
               Text(
-                'Steps',
+                //'Steps',
+                'Pasos',
                 style: Theme.of(context).textTheme.titleLarge!.copyWith(
                       color: Theme.of(context).colorScheme.primary,
                       fontWeight: FontWeight.bold,
